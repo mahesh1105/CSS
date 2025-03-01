@@ -1,0 +1,40 @@
+/*
+    * span is an inline element, it will take width as per the content inside it
+      irrespective of whatever width or height you give to it, it will not change and take only the necessary height and width
+      not like block level element, which takes whole window width
+    
+    Box Model:
+    ----------
+    - It is used when talking about design and layout.
+
+    - The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins.
+    - Everything is rendered in a box model, either it is text, image, icon or anything
+
+    . Content - The content of the box, where text and images appear
+    . Padding - Clears an area around the content. The padding is transparent
+    . Border - A border that goes around the padding and content
+    . Margin - Clears an area outside the border. The margin is transparent
+
+    Padding is the Area between the border and content
+    Margin is the Area between border and outside window (another box or browser window)
+
+    By default, there will be some margin and padding added by the browser
+    Best Practice is to set both of them to zero using Universal Selector
+
+    * CSS Box-Sizing Property:
+    --------------------------
+    ** CSS Box Sizing:
+
+    - The box-sizing property allows us to include the padding and border in an element's total width and height.
+    - If you set box-sizing: border-box; on an element, padding and border are included in the width and height.
+
+    box-sizing: border-box;
+
+    Without the CSS box-sizing Property:
+    ------------------------------------
+
+    By default, the width and height of an element is calculated like this:
+
+    width + padding + border = actual width of an element
+    height + padding + border = actual height of an element
+*/

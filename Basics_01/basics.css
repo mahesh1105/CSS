@@ -1,0 +1,139 @@
+h1 {
+    text-align: center;
+    font-size: larger;
+}
+/* 
+    CSS - Cascading Style Sheet
+    It is used to style HTML elements, adding visual appearence to the web pages.
+
+    There are three types of CSS: (means three ways to style html elements)
+    1. Inline CSS
+    2. Internal CSS
+    3. External CSS
+
+    Inline CSS:
+    -----------
+    - Create style attribute in any HTML tag and add style in it
+
+    Internal CSS:
+    -------------
+    - Create style tag in Head Section of HTML and add style there by selecting the tags/elements
+
+    External CSS:
+    -------------
+    - Create a separate (.css) file, link it to HTML using link attribute and add style to that css file
+
+    Priority:
+    ---------
+    Inline > Internal
+
+    If you want to set Internal to priority, means its styling to be set over others then use !important just after the property
+    Then that property will be set to whatever mentioned in Internal CSS
+
+    ** Among Internal and External CSS, Order matters, which comes at last will overwrite the previous styling of the element
+
+    Ex-1:
+    -------
+    <link rel="stylesheet" href="./style.css"> --> color: green
+    <style>
+        p {
+            color: yellow;
+        }
+    </style>
+
+    - First color will be set to green and later it got overwritten to yellow and that's how final color is yellow
+
+    Ex-2:
+    -----
+    <style>
+        p {
+            color: yellow;
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css"> --> color: green
+
+    - First color will be set to yellow and later it got overwritten to green and that's how final color is green
+
+    ** Same thing can be done with Internal & External CSS, You can mark the property to !important for which you want to set on priority
+
+    # Selectors:
+    ============
+    It is the way using that you can target the HTML elements and can add styling to it
+
+    Types of Selectors:
+    ===================
+    1. Basic Selectors
+        - Universal Selector (*) ✅
+        - Element Selector ✅
+        - Class Selector (.) (elem.className) OR (.className) ✅
+        - ID Selector (#) (elem#className) OR (#className) ✅
+    
+    2. Combinator Selectors:
+        - Descendant Selector (elem1 elem2)(Any Level) ✅
+        - Child Selector (>) (Direct Element - Just Next Level) ✅
+        - Adjacent Sibling Selector (+) (Followed by Current Element) ✅
+        - General Sibling Selector (~) (Followed by Current Element with same Parent) ✅
+
+    3. Attribute Selectors:
+        - Attribute Presence Selector (tagName[attribute]) ✅
+        - Attribute Value Selector
+            -- Value Selector (tagName[attribute = "value"]) ✅
+            -- Space Separated Value's Selector (tagName[attribute ~= "value"])
+            -- Exact or Start Value Selector (tagName[attribute |= "value"])
+            -- Start String Value Selector (tagName[attribute ^= "value"])
+            -- End String Value Selector (tagName[attribute $= "value"])
+            -- Specific Value Selector (tagName[attribute *= "value"])
+        - Combining Attribute Selector (tagName[attribute="value"][attribute="value"]) ✅
+    
+    4. Psuedo-Classes Selectors: tagName:attribute
+        - Interactive/User Action
+            -- :hover ✅
+            -- :focus
+            -- :active ✅
+            -- :visited ✅
+            -- :link ✅ (unvisited)
+            -- :focus-visible
+            -- :focus-within
+        - Structural Targeting
+            -- :first-child
+            -- :last-child
+            -- :nth-child(n)
+            -- :nth-last-child(n)
+            -- :first-of-type
+            -- :last-of-type
+            -- :nth-of-type()
+            -- :nth-last-of-type()
+            -- :only-child
+            -- :only-of-type
+            -- :empty
+            -- :not()
+        - Form Target
+            -- :checked
+            -- :disabled
+            -- :enabled
+            -- :required
+            -- :optional
+            -- :valid
+            -- :invalid
+            -- :in-range
+            -- :out-of-range
+            -- :read-only
+            -- :read-write
+        - Others
+            -- :scope
+            -- :root
+            -- :target
+            -- :lang(language)
+            -- :dir(direction)
+            -- :is(selector)
+            -- :where(selector)
+    
+    5. Pseudo Element's Selector
+        - ::before
+        - ::after
+        - ::first-line
+        - ::first-letter
+        - ::placeholder
+    
+    6. Group Selector (Comma (,) Separated) (elem1, elem2)
+*/
