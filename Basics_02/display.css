@@ -1,0 +1,40 @@
+/*
+    Display property tells how the element is displayed or rendered on the webpage
+
+    display:
+    --------
+    - inline ✅
+    - block  ✅
+    - flex
+    - grid
+    - inline-block ✅
+    - inline-flex
+    - inline-grid
+    - none
+    - ...
+
+    Block Level Elements:
+    ---------------------
+    like - div, p, h1...h6, li, ...
+
+    Four Properties:
+    - Always starts on a new line
+    - Width -> Extreme Left to Extreme Right
+    - Custom Width/Height -> respect
+    - Custom Margin/Padding -> respect
+
+    Inline Elements:
+    ----------------
+    like - a, span, ...
+
+    Four Properties:
+    - Starts on same line (if space is there)
+    - Take the same width as per the content
+    - Custom Width/Height -> don't respect
+    - Custom Padding -> respect, Custom Margin (Horizontal) - respect, (Vertical) - No
+
+    Inline-Block Element:
+    ---------------------
+    . Element will behave like inline element but you can add your custom width/height to it
+
+*/

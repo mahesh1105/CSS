@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            position: relative;
+            height: 8000px;
+        }
+
+        img {
+            margin: 10px;
+        }
+
+        .image2 {
+            /* Make the current position of image be relative to current window */
+            /* position: relative; */
+            /* top: 200px;
+            left: 100px; */
+
+            /* Make the current position of image be relative to its closest positioned ancestor */
+            /* div is positioned to relative, that means current image will behave absolute to its parent */
+            position: absolute;
+            top: 200px;
+        }
+
+        .image4 {
+            /* Position of the 4th image will always be fixed wrt window */
+            /* It will not move from its position if window is scrolled in any direction */
+            position: fixed;
+        }
+
+        .image3 {
+            /* it will remain sticky wrt its parent container and at spcified position */
+            position: sticky;
+            top: 100px;
+        }
+
+        .box {
+            background-color: aquamarine;
+            height: 4000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img 
+            src="../Image.png" 
+            alt="image"
+            width="300px"
+            height="300px"
+            class="image1"
+        />
+        <img 
+            src="../Image.png" 
+            alt="image"
+            width="300px"
+            height="300px"
+            class="image2"
+        />
+        <img 
+            src="../Image.png" 
+            alt="image"
+            width="300px"
+            height="300px"
+            class="image3"
+        />
+        <img 
+            src="../Image.png" 
+            alt="image"
+            width="300px"
+            height="300px"
+            class="image4"
+        />
+    </div>
+
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /*
+                If this is not set, box will change its dimension (width and height)
+                if some padding and border-width is added to it
+                If it is set to border-box, then box will not change its dimensions
+                instead of it, content will get shrink to adjust everything (border-width and padding) in specified dimension
+            */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            padding: 10px;
+            display: inline;
+        }
+
+        span {
+            border: 2px solid green;
+            width: 300px;
+            height: 300px;
+            padding: 100px;
+            /* display: block; */
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box">Hello Mahesh</div> -->
+
+    <span>Hello World</span>
+    <span>Hello Moon</span>
+</body>
+</html>

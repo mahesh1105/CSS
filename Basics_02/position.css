@@ -1,0 +1,43 @@
+/*
+    Position Property:
+    ------------------
+    Position property is used when you want to position your image or text or any element, how and where it will get positioned on webpage
+    like - you want to maintain gap between b/w elements, overlapping of elements and others...
+
+    Position Values:
+    ----------------
+    - static
+    - relative
+    - absolute
+    - fixed
+    - static
+
+    On each and every element, postion property is "static" by default
+    You cannot add left, right, top, bottom or Z-index property to it, 
+    if do so, it will not reflect, because of position to be static by default
+
+    relative:
+    ---------
+    - Relative to Current Window
+    - left, right, top and bottom property can be used to modify the position
+    - Original space or gap occupied by the image is maintained
+
+    absolute:
+    ---------
+    - Relative to its closest positioned ancestor or parent
+    - left, right, top and bottom property can be used to modify the position
+    - Original space or gap occupied by the image is not maintained
+
+    fixed:
+    ------
+    Position of the current image will always be fixed wrt window of webpage
+    It will not move from its position even if the window is scrolled in any direction
+
+    sticky:
+    -------
+    Position of the image will be sticky wrt to or relative to its parent container,
+    It will be sticky specified to its position
+
+    Most of the time, when you visit any website, there you have seen some icon for help in bottom right corner
+    That will remain fixed even if the window is scrolled, there fixed position is used
+*/

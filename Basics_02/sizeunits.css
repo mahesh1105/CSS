@@ -1,0 +1,52 @@
+/*
+    Size Units:
+    -----------
+    Size Units are specified when specifying the height, width, font-size, border-width properties,
+    It gives us more clarity in what respect we are specifying the size
+
+    ## It can be - px, %, vw, vh, rem, em, ...
+
+    Size Units can be relative or absolute
+    relative in sense means, relative to its parent
+    absolute means, original size that is not relative to anything
+
+    -> relative units -> %, vh, vw, em, rem
+    -> absolute units -> cm, mm, in, px
+
+    Ex:
+    ---
+    absolute position of 1px width means it will take 1px width individually for the element
+    relative position of 50% width means it will take 50% space relative to its immediate parent
+
+    ** Above Size Units can be categorized into relative or absolute based on its behavior
+
+    vh - viewport height - whole window height
+    vw - viewport width - whole window width
+
+    100vh - full window height
+    100vw - full window width
+
+    1px (Physical Pixel) = 1/96 inch = 0.26mm
+    100px = 26mm = 2.6cm ~= 1 inch (app)
+
+    Comparing Low Resolution Display vs High Resolution Display
+    -----------------------------------------------------------
+    In LRD, image is not that much clear or blurry kind but in HRD, it is much more clearer than LRD
+
+    Reason is ppi(pixel per inch)...
+    ppi of LRD is less than that of ppi of HRD
+    The more pixel per inch in display more will be the quality
+
+    Ques:
+    -----
+    ppi vs dpi
+    physical pixel vs logical pixel
+
+    Note: By default, the font-size is 16px.
+
+    em: relative to its immediate parent
+    rem: relative to html tag (root element)
+    
+    Note: Try to use absolute unit very less, use relative units more
+    It make website more responsive and looks good on each device.
+*/

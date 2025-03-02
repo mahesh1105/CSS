@@ -1,0 +1,59 @@
+/* 
+    Float vs Clear:
+    ---------------
+    * Float Property is used to float the specific element so that other element can be aligned parallely to it.
+
+    Ex::
+    ----
+    In Wikipedia website, you have seen image on right side and content on left side or vice-versa
+    same can be achieved using the float property
+
+    float:
+    ------
+    - left
+    - right
+    - none
+    - inline-start
+    - inline-end
+
+    Note:
+    - You can use float for floating the image to left or right
+    - But don't use float for layout designing, better to use flexbox and grid
+
+    * Clear Property is used to prevent an element from being positioned next to (the already floated element) a floated element.
+
+    clear:
+    ------
+    - left
+    - right
+    - both
+    - none (default behavior)
+
+    float: right; --> float the element to the right
+    clear: right; --> It ensures that the element will be placed below the floated element instead of beside it.
+
+    It essentially clears any floating elements on the right side
+
+    clear: left; --> Prevents elements from appearing beside left-floated elements.
+    clear: both; --> prevents elements from appearing beside both left and right floated elements.
+    clear: none; --> No Clearing (Default Behavior)
+
+    * Overflow property sets ths desired behavior when content does not fit in the parent element box
+      or overflows in the horizontal and/or vertical direction.
+
+    overflow:
+    ---------
+    - visible
+    - hidden
+    - clip
+    - scroll
+    - auto
+
+    overflow: visible; --> default property, overflow content can be visible clearly
+
+    overflow: hidden; --> Whatever content overflowing or outside the parent conatiner will get hidden
+
+    overflow: auto; --> It will adjust the content inside the parent container automatically, sometimes by adding scroll bar or sometimes increasing the container size
+
+    overflow: scroll; --> Scroll bar will be added to the container so that you can scroll through the content
+*/
