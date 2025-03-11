@@ -89,6 +89,8 @@
     - The row-reverse value displays the flex items horizontally (but from right to left)
     - The column-reverse value displays the flex items vertically (but from bottom to top)
 
+    ## If flex-direction is changed to column, then main and cross axes gets swapped
+
     2. The CSS flex-wrap Property:
     ------------------------------
     . The flex-wrap property specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line.
@@ -109,6 +111,10 @@
     - The nowrap value specifies that the flex items will not wrap (this is default)
     - The wrap value specifies that the flex items will wrap if necessary
     - The wrap-reverse value specifies that the flex items will wrap if necessary, in reverse order
+
+    ## By default, flex-wrap: nowrap; means all flex items will stay in single line, even if they overflow the container.
+    ## Default, It will stay in one row/column (no wrapping). If there's not enough space, they shrink or overflow
+    ## flex-wrap: wrap; Items wrap to the next line/column if there's not enough space
 
     3. The CSS flex-flow Property:
     ------------------------------

@@ -1,0 +1,23 @@
+/*
+    Media Queries is a tool using that you can define how the items are arranged or placed for different screen sizes.
+    It will basically handles the responsiveness, means on different different screen, items are aligned differently
+
+    Ex:
+    ---
+    @media (max-width : 600px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+
+    @media (min-width : 600px) {
+        .container {
+            flex-direction: row;
+        }
+    }
+
+    If max-width is 600px means if width is less than 600px then its flex-direction will be row
+    and if min-width is 600px means if width is more than 600px then its flex-direction will be column
+
+    Select Container by Container and apply CSS Flexbox property to it.
+*/
