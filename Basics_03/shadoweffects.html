@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Creating the custom variable in root, so that it can be accessed from anywhere */
+        :root {
+            --primary-color: yellow;
+            --custom-height: 300px;
+        }
+
+        .container {
+            background-color: beige;
+            height: 650px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            /* Creating the custom variable */
+            --primary-color: brown;
+            --custom-width: 330px;
+            background-color: aquamarine;
+            width: var(--custom-width);
+            height: 330px;
+            border: 1px solid black;
+            margin: 5px;
+            padding: 5px;
+
+            /* By Default, Shadow Color is black */
+
+            /* Box Shadow with x-offset(right) and y-offset(bottom) */
+            box-shadow: 10px 10px;
+            /* Box Shadow with negative x-offset(left) and y-offset(bottom) */
+            box-shadow: -10px 10px;
+
+            /* Box Shadow with x-offset, y-offset and color */
+            box-shadow: 10px 10px var(--primary-color);
+            /* Box Shadow with x-offset, y-offset, blur radius and color */
+            box-shadow: 10px 10px 5px brown;
+            /* Box Shadow with x-offset, y-offset, spread radius, blur radius, and color */
+            box-shadow: 10px 10px 5px 5px brown;
+            /* Box Shadow with x-offset, y-offset, spread radius, blur radius, color and inset parameter */
+            /* box-shadow: 10px 10px 5px 5px brown inset; */
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Add Multiple shadows in text */
+        #head {
+            text-shadow: 5px 5px red, 10px 10px yellow, 7px 7px green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="../logo.svg" alt="image">
+            <h2 id="head">Welcome to Code</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ab quos tempore ducimus impedit omnis hic sunt architecto. Omnis, eveniet.</p>
+        </div>
+    </div>
+</body>
+</html>
