@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: beige;
+            border: 2px solid black;
+            
+            /* Flex will enable to align box content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Center the Box to its parent and takes necessary height and width */
+            margin: auto;
+
+            /* Smoothness is handled by Transitions */
+            transition: all 2s;
+        }
+
+        .box:hover {
+            /* Rotation Part is handled by Transforms */
+            /* transform: rotate(360deg); */
+
+            /* Rotate the Box in Anti-Clockwise Direction */
+            /* transform: rotate(-30deg); */
+
+            /* Make the box double in size */
+            /* transform: scale(2); */
+
+            /* Make the box half in size */
+            /* transform: scale(0.5); */
+
+            /* Tilt the Box from its original position */
+            /* transform: skew(45deg); */
+
+            /* Tilt the Box from its original position in other direction */
+            /* transform: skew(-45deg); */
+
+            /* Move the Box in +ve X-Direction */
+            /* transform: translate(200px); */
+
+            /* Move the Box in -ve X-Direction */
+            /* transform: translate(-200px); */
+
+            /* Move the Box in Bottom Y-Direction only */
+            /* transform: translate(0px, 200px); */
+
+            /* Move the Box in Top Y-Direction only */
+            /* transform: translate(0px, -200px); */
+
+            /* Move the Box in X and Y Direction */
+            transform: translate(200px, 200px);
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>This is a Box</p>
+        </div>
+    </div>
+</body>
+</html>
