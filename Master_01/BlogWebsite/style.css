@@ -31,8 +31,11 @@ body {
 .block {
     display: grid;
 
-    grid-template-columns: repeat(4, 350px);
-    grid-template-rows: repeat(2, 1fr);
+    /* grid-template-columns: repeat(4, 350px);
+    grid-template-rows: repeat(2, 1fr); */
+
+    /* Without using Media Queries - Responsiveness can be added */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
 
     grid-gap: 30px;
     justify-content: center;
@@ -141,7 +144,7 @@ body {
 
 /* Media Queries for Different-Different Screens */
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
     .block {
         grid-template-columns: repeat(1, 350px);
         grid-template-rows: repeat(8, 1fr);
@@ -160,5 +163,58 @@ body {
         grid-template-columns: repeat(3, 350px);
         grid-template-rows: repeat(3, 1fr);
     }
-}
+} */
 
+/*
+    Ex:
+    ---
+    grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
+
+    🤖 auto-fit
+    - It tells the grid to automatically fit as many columns as possible into the row.
+    - It behaves responsively — adjusts based on the available space.
+    - If there’s extra space, it will try to add another column (if it fits within the size range you give).
+
+    📏 minmax(350px, 400px)
+        This means:
+        - The column should be at least 350px wide
+        - But can grow up to 400px if space allows
+
+        It’s like giving it flexible breathing room!
+
+    Ex:
+    ---
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    🧱 auto-fill – "Reserve the space, even if it's empty"
+    - It creates as many columns as it can fit, just like auto-fit.
+    - But if there’s not enough content, it will still reserve empty tracks (spaces).
+    - That means you might see empty columns.
+
+    Example:
+    If you can fit 4 columns but only have 2 items:
+    auto-fill will still act like there are 4 columns.
+    You'll get 2 items and 2 empty spaces.
+
+    🧽 auto-fit – "Shrink and stretch to fit real content only"
+    - It also creates as many columns as it can fit.
+    - But if there’s no content to fill a column, it will collapse that space and let others expand.
+    - Result: no empty spaces; everything hugs the content.
+
+    🔍 Visual Summary:
+    Imagine your layout as empty boxes 🟦:
+
+    auto-fill:
+    ----------
+    [ 🟦 ][ 🟦 ][    ][    ]
+    (2 items + 2 empty boxes)
+    
+    auto-fit:
+    ---------
+    [   🟦   ][   🟦   ]
+    (2 items stretch and fill available space)
+
+    ✅ When to use which?
+    - Use auto-fill if you want a consistent grid, even when not all spaces are filled (e.g. form fields, fixed layout).
+    - Use auto-fit if you want your items to stretch to fill the space and avoid weird empty gaps.
+*/
