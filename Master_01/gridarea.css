@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #fff;
+}
+
+.cntr {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+    display: grid;
+    grid-gap: 10px;
+
+    /* This will tell how your Grid Template will looks like */
+    grid-template-areas: 
+    "header header header"
+    "sidebar content1 content1"
+    "sidebar content2 content3"
+    "footer footer footer"
+    ;
+}
+
+.block {
+    border: 1px solid black;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    font-size: 2rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head {
+    /* grid-area is used to name the block so that it can be used later with grid-template-areas */
+    grid-area: header;
+    background-color: rgb(79, 82, 226);
+}
+
+.sbar {
+    /* grid-area is used to name the block so that it can be used later with grid-template-areas */
+    grid-area: sidebar;
+    background-color: #1eccb5;
+}
+
+.cnt1 {
+    /* grid-area is used to name the block so that it can be used later with grid-template-areas */
+    grid-area: content1;
+    background-color: #0869b8;
+}
+
+.cnt2 {
+    /* grid-area is used to name the block so that it can be used later with grid-template-areas */
+    grid-area: content2;
+    background-color: #0869b8;
+}
+
+.cnt3 {
+    /* grid-area is used to name the block so that it can be used later with grid-template-areas */
+    grid-area: content3;
+    background-color: #0869b8;
+}
+
+.foot {
+    /* grid-area is used to name the block so that it can be used later with grid-template-areas */
+    grid-area: footer;
+    background-color: rgb(79, 82, 226);
+}
