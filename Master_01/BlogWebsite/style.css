@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+}
+
+.main > p {
+    color: rgb(65, 66, 66);
+}
+
+.block {
+    display: grid;
+
+    grid-template-columns: repeat(4, 350px);
+    grid-template-rows: repeat(2, 1fr);
+
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.item {
+    width: 350px;
+    height: 500px;
+
+    background-color: rgb(250, 249, 249);
+
+    border: 1px solid rgb(209, 200, 200);
+    border-radius: 10px;
+
+    /* To maintain the item */
+    display: flex;
+    flex-direction: column;
+
+    /* Content will not overflow outside the item container */
+    overflow: hidden;
+}
+
+.item > a {
+    width: 100%;
+    height: 50%;
+}
+
+.item > a > img {
+    width: 100%;
+    height: 100%;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    cursor: pointer;
+
+    /* Make the smooth transform */
+    transition: transform 0.5s ease;
+}
+
+.content > a {
+    text-decoration: none;
+    color: black;
+}
+
+.content > a > h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content > p {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    color: rgb(65, 66, 66);
+    font-size: 0.9rem;
+}
+
+.item > a > img:hover {
+    transform: scale(1.05);
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.coll {
+    display: flex;
+    gap: 15px;
+}
+
+.bottom img {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 60%;
+    object-fit: cover;
+
+    background-color: rgb(112, 109, 109);
+
+    cursor: pointer;
+}
+
+.bottom > p {
+    border: 1px solid rgb(209, 200, 200);
+    display: inline;
+    border-radius: 5px;
+    padding: 5px;
+
+    color: rgb(65, 66, 66);
+    font-size: 0.9rem;
+}
+
+.details #name {
+    color: dodgerblue;
+}
+
+.details #date {
+    color: rgb(90, 91, 92);
+    font-size: 0.75rem;
+}
+
+/* Media Queries for Different-Different Screens */
+
+@media (max-width: 800px) {
+    .block {
+        grid-template-columns: repeat(1, 350px);
+        grid-template-rows: repeat(8, 1fr);
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .block {
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    .block {
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
