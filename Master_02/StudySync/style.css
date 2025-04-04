@@ -1,0 +1,710 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    /* The vw (viewport width) unit already takes up the entire width of the screen, and 
+    adding padding on top of that makes the total width exceed 100vw, causing overflow. */
+    /* width: 100vh; */
+    width: 100%;
+    height: 100vh;
+    font-family: inter;
+    /* overflow-x: hidden; */
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 1rem;
+    /* overflow-x: hidden; */
+}
+
+.navContainer {
+    /* When width is assigned to any block then setting margin to auto in x-axis will make it center in horizontal direction */
+    /* margin: y-axis x-axis */
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 0rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.penLogo {
+    /* width: 40px;
+    height: 40px; */
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.heading {
+    color: black;
+    font-size: 2.2rem;
+    font-weight: bolder;
+}
+
+.navList {
+    list-style-type: none;
+    display: none;
+    gap: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .navList {
+        display: flex;
+    }
+}
+
+.nav-link {
+    color: #718096;
+    font-weight: bold;
+    font-size: 1.125rem;
+    transform: color 0.1s;
+}
+
+.nav-link:hover {
+    color: rgb(14, 124, 233);
+}
+
+#conBtn {
+    display: none;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(14, 124, 233);
+    color: white;
+    transform: all 0.1s;
+    /* Padding between border and content of button shaped icon */
+    padding: 0.75rem 1rem; 
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    #conBtn {
+        display: block;
+    }
+}
+
+#conBtn:hover {
+    background-color: rgb(6, 107, 207);
+}
+
+.menu-button {
+    display: none;
+    border: none;
+    border-radius: 0.7rem;
+    background-color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+}
+
+.contOne {
+    max-width: 1280px;
+    margin: 50px auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .contOne {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .leftBox {
+        align-items: center;
+        gap: 30px;
+    }
+
+    .rightBox {
+        width: 100%;
+    }
+}
+
+.leftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* gap is maintained between the items even if the screen is reduced */
+    gap: 20px;
+
+    max-width: 450px;
+    height: auto;
+
+    animation: slideFromLeft 1s ease forwards;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    /* 
+        Here, In starting content is fully invisible and 
+        while reaching to the end, opactity will increase
+        and content becomes visible with a smooth effect
+    */
+}
+
+.leftBox > h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#paraOne {
+    color: rgb(6, 107, 207);
+    font-weight: bold;
+}
+
+#content {
+    color: #7c7878;
+    width: 80%;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 6px;
+}
+
+.startBtn {
+    background-color: rgb(14, 124, 233);
+    color: white;
+}
+
+.startBtn:hover {
+    background-color: rgb(6, 107, 207);
+}
+
+.tourBtn {
+    background-color: #272525;
+    color: white;
+}
+
+.tourBtn:hover {
+    background-color: #474444;
+}
+
+.rightBox {
+    max-width: 450px;
+    
+    /* Automatically adjusts the height */
+    height: auto;
+
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 20px;
+}
+
+.contTwo {
+    max-width: 660px;
+    margin: 0 auto;
+}
+
+.contTwo > h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.compBlock {
+    padding: 1rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+
+    background-color: #dddddd;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .compBlock {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 40px;
+        column-gap: 40px;
+    }
+
+    .contTwo {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .leftBox > h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-image {
+    width: 2rem;
+    height: 2rem;
+}
+
+.contThree {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+    background-color: #FAF9F6;
+}
+
+.contThree > h1 {
+    padding: 20px;
+}
+
+.contThree > p {
+    max-width: 832px;
+    text-align: center;
+    padding: 10px;
+    color: #7c7878;
+}
+
+.cardsBlock {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .cardsBlock {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card {
+        gap: 20px;
+    }
+}
+
+.card {
+    max-width: 400px;
+    max-height: 220px;
+
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card > p {
+    text-align: center;
+}
+
+#card1 {
+    background-color: dodgerblue;
+}
+
+#card2 {
+    background-color: rgb(202, 62, 109);
+}
+
+#card3 {
+    background-color: #FFC72C;
+}
+
+#card4 {
+    background-color: #008B8B;
+}
+
+#card5 {
+    background-color: #6B8E23;
+}
+
+#card6 {
+    background-color: #545AA7;
+}
+
+.card-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-color: #FAF9F6;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.contFour {
+    max-width: 1280px;
+    margin: 40px auto;
+}
+
+.contFour > h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testCardColl {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .testCardColl {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.person-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testCard {
+    border: 1px solid #aaa7a7;
+    padding: 15px 20px;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    border-radius: 7px;
+}
+
+.testCard:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+.review {
+    color: #585555;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.info {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.name {
+    color: rgb(83, 45, 221);
+    font-weight: bold;
+}
+
+.role {
+    color: #7c7878;
+}
+
+.contFive {
+    max-width: 1280px;
+    height: 40vh;
+    margin: 20px auto;
+}
+
+.newsletter-section {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftCont {
+    width: 50%;
+    height: 100%;
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+}
+
+.uni-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: cover;
+}
+
+.rightCont {
+    width: 50%;
+    height: 100%;
+    background-color: #e9e4e4;
+    padding: 30px;
+
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+@media screen and (max-width: 640px) {
+    .leftCont {
+        display: none;
+    }
+
+    .rightCont {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .contFive {
+        height: auto;
+        max-width: 400px;
+    }
+}
+
+.news-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.news-heading {
+    color: rgba(45, 75, 207, 0.884);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 420px) {
+    .news-heading {
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+}
+
+.newsletter {
+    color: #7c7878;
+    font-size: 0.8rem;
+}
+
+.news-email {
+    /* width: 100%; */
+    border: 1px solid #ccc;
+    color: #333;
+    outline: none;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+}
+
+.news-email:focus {
+    border-color: #2563eb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-send-button {
+    /* Avoid hardcoding of height and width as much as possible */
+    /* For responsive website, Hardcoding should not be there */
+    /* width: 60px;
+    height: 30px; */
+
+    background-color: rgb(42, 42, 209);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+}
+
+.news-send-button:hover {
+    background-color: rgb(58, 58, 223);
+}
+
+.news-content {
+    font-size: 0.75rem;
+    color: #777;
+}
+
+.news-terms {
+    text-decoration: underline;
+    color: #2563eb;
+}
+
+.footer {
+    max-width: 1280px;
+    margin: 30px auto;
+    padding: 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.topFooter {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.leftLevel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.leftLevel > p {
+    color: #777;
+}
+
+.footer-left-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo-img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.footer-logo-heading {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.socialLogo {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-logo {
+    width: 25px;
+    height: 25px;
+}
+
+.rightLevel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+    .topFooter {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .rightLevel {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 30px;
+    }
+
+    .footer-left-logo {
+        margin: 0 auto;
+    }
+
+    .socialLogo {
+        margin: 0 auto;
+    }
+}
+
+.level {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-head {
+    font-weight: bold;
+}
+
+.level > a {
+    color: #777;
+}
+
+.copyright-section {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #777;
+}
+
+/* 
+    🧊 What is opacity in CSS?f
+    - The opacity property controls how see-through (transparent) an element is.
+
+    opacity: 1; = fully visible
+
+    opacity: 0.5; = 50% transparent
+
+    opacity: 0; = fully invisible
+
+    It's like the element is fading into a ghost 👻 when opacity goes down.
+*/
